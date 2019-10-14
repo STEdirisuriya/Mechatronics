@@ -9,9 +9,30 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/parallax.js" type="text/javascript"></script>
+
+
 </head>
 
-<body>
+<body onload="myFunction()">
+
+        <div id="loadback">
+        <div id="loader"></div>
+        </div>
+
+        <script>
+        var myVar;
+        
+        function myFunction() {
+          myVar = setTimeout(showPage, 1000);
+        }
+
+        function showPage() {
+          document.getElementById("loadback").style.display = "none";
+          document.getElementById("myDiv").style.display = "block";
+        }
+
+        </script>
+        <div style="display:none" id="myDiv" class="animate-bottom">
 
     <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
@@ -38,7 +59,7 @@
         </div>
     </nav>
 
-    <section class="slider">
+    <section class="slider" id="slider" data-depth="0.5">
         <div class="container">
             <div class="background"></div>
             <div class="background2"></div>
@@ -47,23 +68,26 @@
                 <h2 class="display-1 maintext">Mechatronics ?</h2>
             </div>
             <ul id="scene">
-                <li class="layer" data-depth="1"><img src="images/semiconductor.png" width="50%"></li>
-                <li class="layer robohand" data-depth="2"><img src="images/robohand.png" width="70%"></li>
-                <li class="layer" data-depth="-1"><img src="images/robo.png"></li>
+                <li class="layer" data-depth="0.5"><img src="images/semiconductor.png" width="50%"></li>
+                <li class="layer robohand" data-depth="0.2"><img src="images/robohand.png" width="70%"></li>
+                <li class="layer" data-depth="0.5"><img src="images/robo.png"></li>
 
             </ul>
         </div>
         <script>
             var scene = document.getElementById('scene');
             var parallax = new Parallax(scene);
+            var slider = document.getElementById('slider');
+            var parallax = new Parallax(slider);
         </script>
     </section>
 
     <section class="intro">
-        <div class="board">
-                <h1 class="display-3 topic">What it is ?</h1>
-                <blockquote class="blockquote text-right">
-                <p class="h5 intro-text">Mechatronics, which is also called mechatronic engineering, is a multidisciplinary branch of
+        <div class="board" >
+            <h1 class="display-3 topic">What it is ?</h1>
+            <blockquote class="blockquote text-right">
+                <p class="h5 intro-text">Mechatronics, which is also called mechatronic engineering, is a
+                    multidisciplinary branch of
                     engineering that focuses on the engineering of both electrical and mechanical systems, and also
                     includes a combination of robotics, electronics, computer, telecommunications, systems, control, and
                     product engineering. As technology advances over time, various subfields of engineering have
@@ -72,11 +96,140 @@
                     intended to be nothing more than a combination of mechanics and electronics, hence the name being a
                     portmanteau of mechanics and electronics; however, as the complexity of technical systems continued
                     to evolve, the definition had been broadened to include more technical areas.</p>
-                    <footer class="blockquote-footer">Copied from <cite title="Source Title">Wikipedia</cite></footer>
-                          </blockquote>
+                <footer class="blockquote-footer">Copied from <cite title="Source Title">Wikipedia</cite></footer>
+            </blockquote>
         </div>
     </section>
 
+    <section class="photos">
+        <div class="board2">
+            <h1 class="display-3 topic">Articles</h1>
+            <div class="card-columns">
+                <a href="https://en.wikipedia.org/wiki/Mechatronics" target="_blank">
+                <div class="card">
+                    <img src="images/chart.png" class="card-img-top image1" alt="image">
+                    <div class="card-body">
+                        <h5 class="card-title">Fields in Mechatronics</h5>
+                        <p class="card-text">IoT and mechatronics are complementary. Many of the smart components
+                            associated with the Internet of Things will be essentially mechatronic. The development of
+                            the IoT is forcing mechatronics engineers, designers, practitioners and educators to
+                            research the ways in which mechatronic systems and components are perceived, designed and
+                            manufactured. This allows them to face up to new issues such as data security, machine
+                            ethics and the human-machine interface.
+                        </p>
+                        <p class="card-text"><small class="text-muted">- Wikipedia</small></p>
+                    </div>
+                </div>
+                </a>
+                <a href="https://www.engineering.unsw.edu.au/mechanical-engineering/study-with-us/types-of-mechanical-and-manufacturing-engineering/mechatronic-engineering"
+                    target="_blank">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">What is Mechatronic Engineering?</h5>
+                            <p class="card-text">Mechatronic Engineering combines the fundamentals of Mechanical, Electrical and Computer
+                                Science to develop autonomous systems. A Mechatronic Engineer designs smart machines and
+                                systems that are aware of their environment, and can processing information to make
+                                decisions...</p>
+                                <p class="card-text"><small class="text-muted">- UNSW, Australia</small></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/watch?v=4Eaou2pOGGo" target="_blank">
+                    <div class="card">
+                            
+                        <img src="images/factory.jpg" class="card-img-top" alt="..." height="250px;">
+                        <div class="videocard">
+                                <img src="images/play.png" class="card-img-top" alt="...">
+                            </div>
+                        <div class="card-body">
+                        <h5 class="card-title">
+                        - Mechatronics
+                        </h5></div>
+                    </div>
+                </a>
+                <div class="card cardquote bg-primary text-white text-center">
+                    <div class="card-body">
+                        <p>“Science is about knowing, engineering is about doing.”</p>
+                        <footer class="text-white">
+                            - Henry Petroski -
+                        </footer>
+                    </div>
+                </div>
+                <a href="https://www.quora.com/What-is-mechatronics" target="_blank">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">What is Mechatronics?</h5>
+                            <p class="card-text">Mechatronics is a branch of engineering that focuses on designing,
+                                manufacturing and maintaining products that have both mechanical and electronic
+                                components. The term was coined in 1969 by engineer Tetsuro Mori to describe the synergy
+                                that exists between electrical control systems and the mechanical machines they
+                                regulate. Since then, the meaning of the term has broadened to include the integration
+                                of multiple other disciplines, including computer engineering, systems engineering and
+                                programming...
+                            </p>
+                            <p class="card-text"><small class="text-muted">- A question on Quora</small></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/watch?v=4Eaou2pOGGo" target="_blank">
+                    <div class="card">
+                        <div>
+                            <img src="images/industry.jpg" class="card-img-top" alt="..." height="250px;">
+                        <div class="videocard">
+                                <img src="images/play.png" class="card-img-top" alt="...">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                                <h5 class="card-title">
+                                - Mechatronic Engineering
+                                </h5></div>
+                    </div>
+                    
+                </a>
+
+                <a href="https://www.researchgate.net/publication/289871726_Use_of_Mechatronics_in_Today's_Industry_A_Review"
+                    target="_blank">
+                    <div class="card">
+                            <div class="card-body">
+                                    <h5 class="card-title">Use of Mechatronics in Today’s Industry.</h5>
+                            <p class="card-text">Mechanical engineering is one of the most professional branches which experience a surge
+                                growth in early 19th century, as it was the backbone of industrial growth and
+                                revolution. But with the passage of time leading to advancement in technology and
+                                enhancement in productivity, mechanical found difficult to fulfil the demands, whims and
+                                fancies...
+                            </p>
+                            <p class="card-text"><small class="text-muted">- A review on Researchgate</small></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://medium.com/mistyrobotics/mech-a-what-mechatronics-the-engineering-field-you-didnt-know-existed-1b6edc7b3fa9"
+                    target="_blank">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Mech-a-what? Mechatronics — the Engineering Field You Didn’t Know Existed!</h5>
+                            <p class="card-text">Welcome to one of the first sentences I typically hear after
+                                introducing myself as a mechatronic (mech-a-tron-ic) engineer. Recently at a networking
+                                event in Oakland, California, I was asked “Did I hear you right in saying you’re a
+                                mechatronic engineer? I’m a recruiter, and I’ve seen that term a few times from
+                                applicants, but I don’t actually know what that is. Could you explain it to me?”...</p>
+                            <p class="card-text"><small class="text-muted">- A story on Medium</small></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.arduino.cc/" target="_blank">
+                    <div class="card">
+                        <img src="images/arduino.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                                <h5 class="card-title">
+                                - Arduino Website
+                                </h5></div>
+                    </div>
+                    
+                </a>
+            </div>
+        </div>
+    </section>
+    </div>
 </body>
 
 </html>
