@@ -2,6 +2,7 @@
 
 body {
     background: black;
+    zoom: 0.9;
 }
 
 #loadback::after {
@@ -15,7 +16,7 @@ body {
     top: 50%;
     width: 100%;
     z-index: 4;
-    margin-top: 300px;
+    margin-top: 200px;
     background: #bbbbbb1c;
     padding-top: 5px;
     position: absolute;
@@ -361,7 +362,7 @@ ul#scene {
     height: 100%;
     opacity: 0;
     background-color: rgba(57, 17, 168, 0.596);
-    transition: 3s;
+    transition: 0.5s;
 }
 
 .videocard:hover {
@@ -377,4 +378,74 @@ ul#scene {
     left: 0;
     right: 0;
     margin: auto;
+}
+
+.board3 {
+    margin-top: 5%;
+    background: rgba(220, 220, 226, 0.507);
+    border-radius: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
+    z-index: 5;
+}
+
+.sec2 .container .card--content{
+    margin: 10px;   
+    display: inline-block;
+}
+
+.sec2 img{
+    width: 200px;
+    height: 200px;
+}
+ 
+.sec2 {
+    height: 100%;
+}
+
+div.slide{
+    margin-bottom: 30px;
+    height: 500px;
+    width: 100%;
+}
+
+.carousel-control-prev{
+    background: #808080 !important;
+    left: -30px;
+    width: 5%;
+    opacity: 0.8;
+}
+
+.carousel-control-next{
+    background: #808080 !important;
+    right: -30px;
+    width: 5%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev:hover{
+    opacity: 1;
+}
+
+.carousel-control-next:hover{
+    opacity: 1;
+}
+
+ol.carousel-indicators {
+    background: #413da8ba;
+    border-radius: 24px;
+    transition: 1s;
+    margin-bottom: 10px;
+}
+
+ol.carousel-indicators:hover {
+    background: #413da8;
+}
+
+.sec2 .carousel-inner img{
+    
+    height: 500px;
+    width:100%;
 }
