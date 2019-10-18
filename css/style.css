@@ -1,9 +1,13 @@
 /*This website was designed by Supun Tharinda */
 @import url('https://fonts.googleapis.com/css?family=Abel|Orbitron|Russo+One&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: black;
-    zoom: 0.9;
+    zoom: 0.8;
 }
 
 #loadback::after {
