@@ -95,7 +95,8 @@ body {
     height: 80px;
     font-family: 'Orbitron', sans-serif;
     transition: 0.5s;
-    position: absolute;
+    position: fixed;
+    margin-bottom: 10px;
     width: 100%;
 }
 
@@ -184,12 +185,12 @@ a.nav-link-new:hover {
     color: rgb(43, 18, 54) !important;
     background: rgb(148, 12, 114);
     padding: 5px 30px 5px 30px;
-
+    
 }
 
 .search-box {
-    background: rgba(255, 255, 255, 0.404);
-    border-radius: 0;
+    background: rgba(207, 207, 207, 0.404);
+    border-radius: 0.5;
     border: none;
     transition: 1s;
 }
@@ -197,7 +198,7 @@ a.nav-link-new:hover {
 .btn-purple {
     border: 1px solid rgb(148, 12, 114);
     transition: 0.5s;
-    border-radius: 0;
+    border-radius: 0.5;
     color: white;
 }
 
@@ -384,8 +385,6 @@ ul#scene {
     margin-top: 5%;
     background: rgba(220, 220, 226, 0.507);
     border-radius: 10px;
-    margin-left: 15%;
-    margin-right: 15%;
     padding-left: 5%;
     padding-right: 5%;
     z-index: 5;
@@ -397,8 +396,9 @@ ul#scene {
 }
 
 .sec2 img{
-    width: 200px;
+    width: 100%;
     height: 200px;
+    transition: 1s;
 }
  
 .sec2 {
@@ -448,4 +448,49 @@ ol.carousel-indicators:hover {
     
     height: 500px;
     width:100%;
+}
+
+.con4{
+    font-family: 'Abel', sans-serif;
+    padding-bottom: 30px;
+}
+
+.footer{
+    font-family: 'Abel', sans-serif;
+    background: rgba(220, 220, 226, 0.336);
+    color: rgb(0, 0, 0);
+    margin-top: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+h1.display-5.topic {
+        margin-top: -35px;
+}
+
+.iconssocial a{
+    text-decoration: none;    
+    color: #423679;
+    font-size: larger;
+}
+
+/*Scroll bar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+::-webkit-scrollbar-button {
+    background: #423679;
 }
